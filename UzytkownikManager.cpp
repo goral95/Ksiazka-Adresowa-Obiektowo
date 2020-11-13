@@ -95,3 +95,19 @@ void UzytkownikManager::logowanieUzytkownika() {
     return;
 }
 
+void UzytkownikManager::zmianaHaslaZalogowanegoUzytkownika(){
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    cin >> noweHaslo;
+    for (int i = 0; i < uzytkownicy.size(); i++)
+    {
+        if (uzytkownicy[i].pobierzId() == idZalogowanegoUzytkownika)
+        {
+            uzytkownicy[i].ustawHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    //zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
+
