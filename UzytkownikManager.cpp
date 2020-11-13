@@ -108,6 +108,12 @@ void UzytkownikManager::zmianaHaslaZalogowanegoUzytkownika(){
             system("pause");
         }
     }
-    //zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
+
+void UzytkownikManager::wylogowanieUzytkownika(){
+    idZalogowanegoUzytkownika = 0;
+    cout << "Wylogowales sie." << endl << endl;
+    system("pause");
 }
 
