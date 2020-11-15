@@ -1,0 +1,8 @@
+1|3|lukasz|gorcztyk|123 123 123|afg@123|asdfasf 123|
+2|1|agnieszka|wolanin|123|123|123|
+3|1|denis|jakis|adfga|adfg|adfg|
+4|2|lala|lala|lala|lala|lala|
+5|2|asdf|asdf|123 123|asdf|asdf 123|
+6|3|lukasz|goral|123|123|123|
+7|2|asdf|asdf|asdf|asdf|asdf|
+8|2|asdf|asdf|asdf|sdf|asdf|
