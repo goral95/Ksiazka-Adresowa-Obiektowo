@@ -1,11 +1,11 @@
 #include "AdresatManager.h"
 
-void AdresatManager::dodajAdresata(int idZalogowanegoUzytkownika){
+void AdresatManager::dodajAdresata(){
     Adresat adresat;
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
-    adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika);
+    adresat = podajDaneNowegoAdresata(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
@@ -15,8 +15,8 @@ void AdresatManager::dodajAdresata(int idZalogowanegoUzytkownika){
 Adresat AdresatManager::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika){
     Adresat adresat;
 
-    adresat.ustawId(++idOstatniegoAdresata);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata() + 1));
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
 
     cout << "Podaj imie: ";
@@ -65,11 +65,3 @@ void AdresatManager::wyswietlDaneAdresata(Adresat adresat){
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
-void AdresatManager::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika){
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-    idOstatniegoAdresata = plikZAdresatami.wczytajIdOstatniegoAdresataZPliku();
-}
-
-void AdresatManager::wyczyscWektorAdresatow(){
-    adresaci.clear();
-}

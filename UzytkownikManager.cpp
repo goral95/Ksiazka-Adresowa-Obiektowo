@@ -64,10 +64,6 @@ void UzytkownikManager::wypiszWszystkichUzytkownikow() {
     }
 }
 
-void UzytkownikManager::wczytajUzytkownikowZPliku(){
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
-
 void UzytkownikManager::logowanieUzytkownika() {
     string login = "", haslo = "";
 
@@ -119,5 +115,12 @@ void UzytkownikManager::wylogowanieUzytkownika(){
     idZalogowanegoUzytkownika = 0;
     cout << "Wylogowales sie." << endl << endl;
     system("pause");
+}
+
+bool UzytkownikManager::czyUzytkownikJestZalogowany(){
+    if(idZalogowanegoUzytkownika > 0)
+        return true;
+    else
+        return false;
 }
 
