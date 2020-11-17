@@ -27,6 +27,7 @@ public:
     };
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void usunAdresata();
 };
 
 #endif // ADRESATMANAGER_H
