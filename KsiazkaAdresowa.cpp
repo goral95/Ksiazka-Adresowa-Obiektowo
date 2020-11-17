@@ -85,4 +85,8 @@ void KsiazkaAdresowa::usunAdresata(){
     adresatManager->usunAdresata();
 }
 
+void KsiazkaAdresowa::edytujAdresata(){
+    adresatManager->edytujAdresata();
+}
+
 

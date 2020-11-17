@@ -20,6 +20,7 @@ class AdresatManager{
 
     Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
     void wyswietlDaneAdresata(Adresat adresat);
+    char wybierzOpcjeZMenuEdycja();
 public:
     AdresatManager(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika): plikZAdresatami(nazwaPlikuZAdresatami),
     ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika){
@@ -28,6 +29,7 @@ public:
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     void usunAdresata();
+    void edytujAdresata();
 };
 
 #endif // ADRESATMANAGER_H
