@@ -81,4 +81,8 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
     return wybor;
 }
 
+void KsiazkaAdresowa::usunAdresata(){
+    adresatManager->usunAdresata();
+}
+
 

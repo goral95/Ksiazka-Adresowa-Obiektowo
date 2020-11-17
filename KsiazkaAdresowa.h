@@ -33,6 +33,7 @@ public:
     bool czyUzytkownikJestZalogowany();
     char wybierzOpcjeZMenuGlownego();
     char wybierzOpcjeZMenuUzytkownika();
+    void usunAdresata();
 };
 
 #endif // KSIAZKAADRESOWA_H
